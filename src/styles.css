@@ -10,9 +10,22 @@
   --shadow-soft: 0 22px 45px rgba(15, 23, 42, 0.75);
 }
 
+body.theme-day {
+  --bg: #f3f4f6;
+  --bg-elevated: #ffffff;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.15);
+  --text: #111827;
+  --muted: #4b5563;
+  --border-subtle: rgba(148, 163, 184, 0.35);
+  --danger: #b91c1c;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
 * {
   box-sizing: border-box;
 }
+
 
 html,
 body {

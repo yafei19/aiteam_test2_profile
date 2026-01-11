@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export function App() {
+  const [theme, setTheme] = useState('night')
+
+  useEffect(() => {
+    document.body.classList.toggle('theme-day', theme === 'day')
+    document.body.classList.toggle('theme-night', theme === 'night')
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'night' ? 'day' : 'night'))
+  }
+
+
   return (
     <div className="page">
       <header className="nav">
@@ -10,7 +22,16 @@ export function App() {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button
+          type="button"
+          className="btn ghost"
+          onClick={toggleTheme}
+          aria-label="Toggle day and night theme"
+        >
+          {theme === 'night' ? 'Day Mode' : 'Night Mode'}
+        </button>
       </header>
+
 
       <main className="hero" id="about">
         <section className="hero-content">
